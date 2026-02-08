@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hello-k3s
 spec:
-  replicas: 2              # 실행할 앱 개수 (이 숫자를 바꾸고 Push하면 GitOps 작동)
+  replicas: 4              # 실행할 앱 개수 (이 숫자를 바꾸고 Push하면 GitOps 작동)
   selector:
     matchLabels:
       app: hello-k3s
@@ -18,4 +18,4 @@ spec:
       - name: nginx-container
         image: nginx:latest # 나중에 Spring Boot 이미지 주소로 변경될 부분
         ports:
-        - containerPort: 80
+        - containerPort: 80s
